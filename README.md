@@ -1,4 +1,2 @@
-﻿# API para cadastro de produtos
+﻿# API para controle de estoque.
 
-
-# Destinada ao cadastro de produtos.
