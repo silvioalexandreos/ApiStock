@@ -1,8 +1,10 @@
-﻿using Stock.Business.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Stock.Business.Entities;
 using Stock.Business.Interfaces.Repositories;
 using Stock.Infra.Data.Context;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Stock.Infra
 {
@@ -11,22 +13,12 @@ namespace Stock.Infra
         public ProductRepository(StockContext context)
             : base(context) { }
 
-        public bool Delete(Guid id)
+        public async Task<IEnumerable<Product>> GetProductAll()
         {
-            throw new NotImplementedException();
+            return await _dbSet.ToListAsync();
         }
 
-        public IEnumerable<Product> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Product> GetByCategory(Guid categoryId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Product GetById(Guid id)
+        public Task<Product> GetProductById(Guid id)
         {
             throw new NotImplementedException();
         }
@@ -37,6 +29,16 @@ namespace Stock.Infra
         }
 
         public Product Update(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Delete(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<Product>> IProductRepository.GetByCategory(Guid categoryId)
         {
             throw new NotImplementedException();
         }

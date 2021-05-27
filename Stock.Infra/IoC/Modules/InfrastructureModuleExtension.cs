@@ -23,6 +23,6 @@ namespace Stock.Infra.IoC.Modules
 
         private static IServiceCollection RegisterContext(this IServiceCollection services, IConfiguration configuration)
             => services.AddDbContext<StockContext>(options
-                => options.UseNpgsql(configuration.GetConnectionString(StockConnectionName)));
+                => options.UseSqlServer(configuration.GetConnectionString(StockConnectionName)));
     }
 }

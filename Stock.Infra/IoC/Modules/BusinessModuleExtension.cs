@@ -7,7 +7,7 @@ namespace Stock.Infra.IoC.Modules
 {
     internal static class BusinessModuleExtension
     {
-        internal static IServiceCollection RegisterBusinessDependencies(this IServiceCollection services, IConfiguration configuration) 
-            => services.AddScoped<IStockService, StockService>();
+        internal static IServiceCollection RegisterBusinessDependencies(this IServiceCollection services, IConfiguration configuration)
+            => services.AddScoped<IProductService, ProductService>();
     }
 }

@@ -9,6 +9,8 @@ namespace Stock.Infra.Data.Context
 
         public DbSet<Product> Products { get; set; }
         public DbSet<CategoryProduct> Categories { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
