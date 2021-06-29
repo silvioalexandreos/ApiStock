@@ -14,10 +14,6 @@ namespace Stock.Infra.Data.Mappings
         {
             builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.Active)
-                .HasColumnType("boolean")
-                .IsRequired();
-
             builder.Property(x => x.CreatedAt)
                 .HasColumnType("timestamp ")
                 .IsRequired();

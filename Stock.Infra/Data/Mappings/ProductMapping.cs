@@ -10,7 +10,6 @@ namespace Stock.Infra.Data.Mappings
 
         public override void Configure(EntityTypeBuilder<Product> builder)
         {
-            
         }
     }
 }

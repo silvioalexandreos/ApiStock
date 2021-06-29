@@ -46,7 +46,6 @@ namespace Stock.Infra.Data.Repositories
         {
             var result = _dbSet.Where(x => x.Id == id).FirstOrDefault();
 
-            result.Active = false;
             _dbSet.Update(result);
             _context.SaveChanges();
 

@@ -11,7 +11,6 @@ namespace Stock.Business.Entities
         public string Name { get; set; }
         public int Doc { get; set; }
         public TypeSupplier TypeSupplier { get; set; }
-        public Address Address { get; set; }
 
         public IEnumerable<Product> Products { get; set; }
     }

@@ -10,11 +10,7 @@ namespace Stock.Infra.Data.Mappings
 
         public override void Configure(EntityTypeBuilder<CategoryProduct> builder)
         {
-            builder.Property(x => x.Name)
-                .HasColumnType("varchar(100)")
-                .IsRequired();
 
-            base.Configure(builder);
         }
     }
 }
